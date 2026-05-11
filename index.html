@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EtuDemande - Portail Étudiant</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="header" id="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                    <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                </svg>
+                <span>EtuDemande</span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <a href="#accueil" class="nav-link">Accueil</a>
+                <a href="#nouvelle-demande" class="nav-link">Nouvelle Demande</a>
+                <a href="#mes-demandes" class="nav-link">Mes Demandes</a>
+                <a href="#admin" class="nav-link">Administration</a>
+            </nav>
+            
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="hero" id="accueil">
+            <div class="hero-bg">
+                <div class="hero-circle hero-circle-1"></div>
+                <div class="hero-circle hero-circle-2"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Portail Étudiant en ligne
+                    </div>
+                    <h1 class="hero-title">
+                        Simplifiez vos <span class="text-primary">demandes étudiantes</span>
+                    </h1>
+                    <p class="hero-description">
+                        Une plateforme moderne et intuitive pour envoyer vos demandes, suivre leur statut et recevoir des réponses rapidement.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#nouvelle-demande" class="btn btn-primary btn-lg">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                <line x1="12" y1="8" x2="12" y2="12"/>
+                                <line x1="10" y1="10" x2="14" y2="10"/>
+                            </svg>
+                            Faire une demande
+                        </a>
+                        <a href="#mes-demandes" class="btn btn-outline btn-lg">
+                            Voir mes demandes
+                        </a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                            </div>
+                            <span class="stat-value">Simple</span>
+                            <span class="stat-label">Envoi rapide</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <polyline points="12 6 12 12 16 14"/>
+                                </svg>
+                            </div>
+                            <span class="stat-value">24h</span>
+                            <span class="stat-label">Temps de réponse</span>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                                    <polyline points="22 4 12 14.01 9 11.01"/>
+                                </svg>
+                            </div>
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">Suivi garanti</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="5" x2="12" y2="19"/>
+                    <polyline points="19 12 12 19 5 12"/>
+                </svg>
+            </div>
+        </section>
+
+        
+        <section class="section" id="nouvelle-demande">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Nouvelle Demande</h2>
+                    <p class="section-description">Remplissez le formulaire ci-dessous pour soumettre votre demande.</p>
+                </div>
+                
+                <div class="form-card">
+                    <div class="form-card-header">
+                        <svg class="form-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"/>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                        </svg>
+                        <div>
+                            <h3 class="form-card-title">Formulaire de demande</h3>
+                            <p class="form-card-description">Tous les champs marqués d'un * sont obligatoires.</p>
+                        </div>
+                    </div>
+                    
+                    <form id="demandeForm" class="form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="nom" class="form-label">
+                                    <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="12" cy="7" r="4"/>
+                                    </svg>
+                                    Nom complet *
+                                </label>
+                                <input type="text" id="nom" name="nom" class="form-input" placeholder="Votre nom complet" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">
+                                    <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                        <polyline points="22,6 12,13 2,6"/>
+                                    </svg>
+                                    Email *
+                                </label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="votre.email@exemple.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="type" class="form-label">
+                                <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                </svg>
+                                Type de demande *
+                            </label>
+                            <select id="type" name="type" class="form-select" required>
+                                <option value="">Sélectionnez le type de demande</option>
+                                <option value="aide">Demande d'aide</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="probleme">Signaler un problème</option>
+                                <option value="autre">Autre demande</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="sujet" class="form-label">
+                                <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                    <polyline points="14 2 14 8 20 8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                </svg>
+                                Sujet *
+                            </label>
+                            <input type="text" id="sujet" name="sujet" class="form-input" placeholder="Résumez votre demande en quelques mots" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">
+                                <svg class="label-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                                </svg>
+                                Message détaillé *
+                            </label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" placeholder="Décrivez votre demande en détail..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg btn-full" id="submitBtn">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                            <span class="btn-text">Envoyer ma demande</span>
+                            <span class="btn-loading" style="display: none;">
+                                <svg class="spinner" viewBox="0 0 24 24">
+                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="3" fill="none" stroke-dasharray="30 70"/>
+                                </svg>
+                                Envoi en cours...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="section section-muted" id="mes-demandes">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mes Demandes</h2>
+                    <p class="section-description">Consultez le statut de vos demandes envoyées.</p>
+                </div>
+                
+                <div id="demandesListe" class="demandes-liste">
+                    
+                </div>
+                
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="empty-title">Aucune demande</h3>
+                    <p class="empty-description">Vous n'avez pas encore envoyé de demande. Utilisez le formulaire ci-dessus pour soumettre votre première demande.</p>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="section" id="admin">
+            <div class="container">
+                <div class="section-header">
+                    <div class="admin-badge">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        Espace Administration
+                    </div>
+                    <h2 class="section-title">Gestion des Demandes</h2>
+                    <p class="section-description">Répondez aux demandes des étudiants et gérez leur statut.</p>
+                </div>
+                
+                
+                <div class="stats-grid" id="statsGrid">
+                    <div class="stats-card">
+                        <span class="stats-value" id="statTotal">0</span>
+                        <span class="stats-label">Total</span>
+                    </div>
+                    <div class="stats-card stats-warning">
+                        <span class="stats-value" id="statEnAttente">0</span>
+                        <span class="stats-label">En attente</span>
+                    </div>
+                    <div class="stats-card stats-info">
+                        <span class="stats-value" id="statEnCours">0</span>
+                        <span class="stats-label">En cours</span>
+                    </div>
+                    <div class="stats-card stats-success">
+                        <span class="stats-value" id="statTraite">0</span>
+                        <span class="stats-label">Traité</span>
+                    </div>
+                </div>
+                
+                <div id="adminListe" class="demandes-liste">
+        
+                </div>
+                
+                <div id="adminEmptyState" class="empty-state">
+                    <div class="empty-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="empty-title">Aucune demande à traiter</h3>
+                    <p class="empty-description">Les nouvelles demandes des étudiants apparaîtront ici.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#" class="logo">
+                    <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                    </svg>
+                    <span>EtuDemande</span>
+                </a>
+                <p class="footer-text">
+                    Fait par Fawann AZA <span class="heart"></span> pour les étudiants
+                </p>
+                <p class="footer-copyright">
+                    &copy; 2026 EtuDemande. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <div id="toast" class="toast">
+        <div class="toast-content">
+            <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <div class="toast-text">
+                <span class="toast-title" id="toastTitle">Succès</span>
+                <span class="toast-description" id="toastDescription">Votre demande a été envoyée.</span>
+            </div>
+        </div>
+        <button class="toast-close" onclick="hideToast()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"/>
+                <line x1="6" y1="6" x2="18" y2="18"/>
+            </svg>
+        </button>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
